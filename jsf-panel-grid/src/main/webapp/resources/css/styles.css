@@ -32,6 +32,11 @@ html,body {
 	text-align: center;
 }
 
+.title {
+	font-style: italic;
+	text-decoration: underline;
+}
+
 .table-style {
 	width: 600px;
 	/*margin-left: calc(50% - 300px);*/
