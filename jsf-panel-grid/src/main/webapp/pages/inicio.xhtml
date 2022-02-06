@@ -1,0 +1,90 @@
+<ui:composition template="../templates/master.xhtml"
+		xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+	<ui:define name="content">
+		<div style="border-bottom: 1px solid #CCC;padding:10px">
+			<h:panelGrid columns="1" columnClasses="col-1" style="width:100%;">
+				<h:outputText value="JSF panelGrid Example" />
+			</h:panelGrid>
+		</div>
+		<div id="container">
+			<h:form id="customerForm">
+			
+				<p />
+				<h:outputText value="PanelGrid - Ejemplo 1:" />
+				<p />
+
+			
+				<h:panelGrid
+						border="1"
+						columns="2" 
+						styleClass="table-style">
+				
+					<h:outputLabel for="it-nombre-1" value="Nombre: " />
+					<h:inputText id="it-nombre-1" />
+
+					<h:outputLabel for="it-apellido-1" value="Apellido: " />
+					<h:inputText id="it-apellido-1" />
+					
+				</h:panelGrid>
+
+				<p />
+				<h:outputText value="PanelGrid - Ejemplo 2:" />
+				<p />
+				
+				<h:panelGrid
+						border="1"
+						columns="2"
+						styleClass="table-style">
+				
+					<f:facet name="header">
+						<h:outputText value="This is my header" />
+					</f:facet>
+				
+					<h:outputLabel for="it-nombre-2" value="Nombre: " />
+					<h:inputText id="it-nombre-2" />
+
+					<h:outputLabel for="it-apellido-2" value="Apellido: " />
+					<h:inputText id="it-apellido-2" />
+
+					<f:facet name="footer">
+						<h:outputText value="This is my footer" />
+					</f:facet>
+					
+				</h:panelGrid>
+
+				<p />
+				<h:outputText value="PanelGrid - Ejemplo 2:" />
+				<p />
+
+				<h:panelGrid
+						border="1"
+						columns="2"
+						headerClass="table-header"
+						footerClass="table-footer"
+						columnClasses="table-col-1,table-col-2"
+						styleClass="table-style">
+				
+					<f:facet name="header">
+						<h:outputText value="This is my header" />
+					</f:facet>
+				
+					<h:outputLabel for="it-nombre-3" value="Nombre: " />
+					<h:inputText id="it-nombre-3" />
+
+					<h:outputLabel for="it-apellido-3" value="Apellido: " />
+					<h:inputText id="it-apellido-3" />
+					
+					<f:facet name="footer">
+						<h:outputText value="This is my footer" />
+					</f:facet>
+					
+				</h:panelGrid>
+				
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>
